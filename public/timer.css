@@ -1,0 +1,105 @@
+@layer components {
+
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::
+         COUNTDOWN-SINGLE-PRODUCT-STYLESHEET...
+    ::::::::::::::::::::::::::::::::::::::::::::::::
+    */
+    /* همه کلاس‌ها با wc-countdown- شروع می‌شوند تا تداخل نداشته باشند */
+    .wc-countdown {
+        display: flex;
+        gap: 2px;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .amazing-swiper .wc-countdown {
+        display: flex;
+        gap: 0.2rem;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .amazing-swiper .wc-countdown-digits {
+        padding: 0 0.4rem;
+        gap: 4px;
+    }
+
+    .wc-countdown-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .wc-countdown-digits {
+        display: flex;
+        /*background: var(--color-base-300);*/
+        border-radius: 8px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.5rem;
+    }
+
+    .wc-countdown-digit {
+        position: relative;
+        height: 2.5rem;
+        width: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--text-xl);
+        font-weight: 600;
+        color: inherit;
+    }
+
+    .amazing-swiper .wc-countdown-digits {
+        background: var(--color-base-100);
+        border-radius: 0;
+    }
+
+    .amazing-swiper .wc-countdown-digit {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: var(--color-primary);
+
+        height: 2.2rem;
+        width: 0.8rem;
+    }
+
+    .wc-countdown-digit span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transform: translateY(0);
+        transition: transform 0.4s ease-in-out;
+        -webkit-transition: transform 0.4s ease-in-out;
+        -moz-transition: transform 0.4s ease-in-out;
+        -ms-transition: transform 0.4s ease-in-out;
+        -o-transition: transform 0.4s ease-in-out;
+    }
+
+    .amazing-swiper .wc-countdown-label {
+        display: none;
+    }
+
+    .wc-countdown-label {
+        margin-top: 0.35rem;
+        font-size: 0.725rem;
+        color: inherit;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    .wc-countdown-finished {
+        margin-top: 4px;
+        font-weight: 700;
+        color: var(--color-primary);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

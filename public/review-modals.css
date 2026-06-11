@@ -1,0 +1,334 @@
+@layer components {
+    #sendReview__Modal .modal-box {
+        overflow: hidden;
+    }
+
+    #reviewModal {
+        animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .step-content {
+        animation: slideIn 0.3s;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .step-dot {
+        transition: background-color 0.3s;
+        color: var(--color-emerald-500);
+    }
+
+    .star-rating label i {
+        color: var(--color-fuchsia-500);
+        transition: color 0.3s;
+    }
+
+    .star-rating input:checked ~ label i,
+    .star-rating label:hover ~ label i,
+    .star-rating label:hover i {
+        color: var(--color-orange-300);
+    }
+
+    .star-rating input:checked + label i {
+        color: var(--color-orange-500);
+    }
+
+    /* purchaser-review-form */
+    .modal-wrapper {
+    }
+
+    .modal-content .review-err {
+        @apply text-error my-2 text-sm hidden  mx-1;
+    }
+
+    .modal-wrapper .review-modal-header {
+        @apply flex flex-col justify-start items-start border-b border-base-200;
+    }
+
+    .modal-wrapper .review-modal-header > div {
+        @apply flex items-center justify-between w-full px-6 py-4;
+    }
+
+    .modal-wrapper .review-modal-header > div h4 {
+    }
+
+    .modal-wrapper .review-modal-header > div button {
+        @apply text-gray-500 hover:text-gray-700 text-xl;
+    }
+
+    .modal-wrapper .review-modal-header .review-modal-indicators {
+        @apply flex flex-col-reverse items-start justify-center gap-2 mt-2 px-6;
+    }
+
+    .modal-wrapper .review-modal-header .review-modal-indicators .review-indicator-steps {
+        @apply flex gap-1 w-full items-center m-0;
+    }
+
+    .modal-wrapper .review-modal-header .review-modal-indicators .review-indicator-steps .step-indicator.active {
+        @apply transition-all duration-300 !bg-info;
+    }
+
+    .modal-wrapper .review-modal-header .review-modal-indicators .review-indicator-steps .step-indicator {
+        @apply w-1/4 h-1 rounded-full bg-base-300;
+    }
+
+    .modal-wrapper .review-modal-header .review-modal-indicators .review-indicator-steps {
+        @apply text-xs text-muted;
+    }
+
+    /* modal-show-this-product... */
+    .modal-wrapper .modal-show-product {
+        @apply border-b border-base-200 py-2 flex flex-row justify-between items-center gap-4 px-6;
+    }
+
+    .modal-wrapper .modal-show-product .product-images {
+        @apply w-fit;
+    }
+
+    .modal-wrapper .modal-show-product .product-images img {
+        @apply w-16 h-auto object-contain mix-blend-darken;
+    }
+
+    .modal-wrapper .modal-show-product .product-detail {
+        @apply w-fit grow flex items-center justify-center overflow-hidden;
+    }
+
+    /*ModalContent...*/
+    .modal-wrapper .modal-content {
+        @apply p-6 overflow-y-auto max-h-[60vh];
+    }
+
+    /*step-one...*/
+    .modal-content .step-content.step-one {
+    }
+
+    .modal-content .step-one .rating-section {
+        @apply mb-6;
+    }
+
+    .modal-content label {
+        @apply block mb-3 font-bold text-md;
+    }
+
+    .modal-content .step-one .rating-section .rating-system {
+        @apply py-4;
+    }
+
+    .modal-content .step-one .rating-section .stars-box {
+        @apply flex justify-center items-center gap-3 py-2;
+    }
+
+    .modal-content .step-one .rating-section .rating-feedback {
+        @apply mt-4 text-center block w-full;
+    }
+
+    /*step-two...*/
+    .modal-content .step-two label {
+        @apply block mb-2 font-medium;
+    }
+
+    .modal-content .step-two .reviewer-title {
+        @apply mb-4;
+    }
+
+    .modal-content .step-two .reviewer-title input {
+        @apply w-full border border-base-200 rounded-field p-3 text-strong;
+    }
+
+
+    .modal-content .step-two .reviewer-text-comment textarea {
+        @apply text-strong w-full block border border-base-200 rounded-field p-4 h-40 resize-none overflow-y-auto overflow-x-hidden;
+    }
+
+    .modal-content .step-two .reviewer-text-comment .counter-characters {
+        @apply flex justify-between items-center mt-2;
+    }
+
+    .modal-content .step-two .reviewer-text-comment #charCount {
+        @apply text-sm text-gray-500 ml-auto;
+    }
+
+    .modal-content .step-two .ai-suggestion {
+        @apply mt-3 bg-blue-50 border border-blue-200 rounded-box p-3;
+    }
+
+    .modal-content .step-two .ai-suggestion > div {
+        @apply flex items-center gap-2 mb-2;
+    }
+
+    .modal-content .step-two .ai-suggestion > div img {
+        @apply w-6 h-6;
+    }
+
+    .modal-content .step-two .ai-suggestion > div span {
+        @apply text-sm font-medium text-blue-700;
+    }
+
+    .modal-content .step-two .ai-suggestion ul {
+        @apply text-sm text-blue-600 list-disc pr-4 space-y-1;
+    }
+
+    /*step-tree...*/
+    .modal-content .step-three .upload-user-images {
+        @apply mb-6 relative;
+    }
+
+    .modal-content .step-three .upload-user-images #drop-area {
+        @apply border-2 border-dashed border-base-200 rounded-lg p-6 text-center hover:border-blue-400 transition-colors;
+    }
+
+    .modal-content .step-three .upload-user-images #drop-area > i {
+        @apply text-3xl text-gray-400 mb-2;
+    }
+
+    .modal-content .step-three .upload-user-images #image-preview {
+        @apply mt-4 grid grid-cols-5 gap-2;
+    }
+
+    .modal-content .step-three .upload-user-images .image-preview-notice {
+        @apply text-xs text-gray-500 mt-2;
+    }
+
+    .modal-content .step-three #upload-loading {
+        @apply hidden justify-center items-center text-center py-4 transition-all;
+    }
+
+    #upload-loading.hidden {
+        display: none;
+    }
+
+    .modal-content .step-three #upload-loading > div {
+        @apply inline-flex items-center gap-3 bg-blue-50 border border-blue-200 rounded-box px-6 py-3;
+    }
+
+    .modal-content .step-three #upload-loading .upload-loading-spin {
+        @apply w-6 h-6 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+    }
+
+    .animate-spin {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /*step-four...*/
+    .modal-content .step-four .purchased-chips {
+        @apply mb-6 bg-sky-50 border border-sky-200 rounded-xl p-4;
+    }
+
+    .modal-content .step-four .purchased-chips h4 {
+        @apply font-bold text-sky-800 mb-3 flex items-center gap-2
+    }
+
+    .modal-content .step-four .purchased-chips .packet-sending-speed {
+    }
+
+    .modal-content .step-four .chip-review {
+        @apply px-4 py-2 rounded-box bg-base-100 text-strong transition-all cursor-pointer border-2 border-base-200 hover:border-base-200;
+    }
+
+    .modal-content .step-four .chip-review.selected {
+        @apply bg-success text-base-100 border-success;
+    }
+
+    .modal-content .step-four .chip-review.disabled, .chip-review:disabled {
+        @apply opacity-50 cursor-not-allowed pointer-events-none
+    }
+
+    .modal-content .step-four .summary-of-information {
+        @apply mb-6 bg-gray-50 border border-base-200 rounded-xl p-4;
+    }
+
+    .modal-content .step-four .summary-of-information h4 {
+        @apply font-bold text-strong mb-3 flex items-center gap-2;
+    }
+
+    .modal-content .step-four .summary-of-information .summary-info {
+        @apply grid grid-cols-2 gap-3 text-sm;
+    }
+
+    .modal-content .step-four .summary-rules {
+    }
+
+    /*modal-footer...*/
+    .modal-wrapper .review-modal-footer {
+        @apply flex items-center gap-8 justify-between px-4 py-6 w-full border-t border-base-200 bg-base-200/0;
+    }
+
+    .modal-wrapper .review-modal-footer div {
+        @apply flex gap-3 justify-start items-center;
+    }
+
+    /* ---------------|| simple-review-form ||--------------- */
+    .simple-review-form {
+    }
+
+    .simple-review-form .simple-modal-header {
+        @apply w-full flex justify-between items-center gap-3 py-4 px-6 border-b border-base-200;
+    }
+
+    .simple-review-form .modal-show-product {
+        @apply w-full flex justify-between items-center gap-4 px-6 py-4;
+    }
+
+    .simple-review-form .modal-show-product .product-detail {
+        @apply w-fit grow overflow-hidden;
+    }
+
+    .simple-review-form .modal-show-product .product-images {
+        @apply flex items-center justify-start gap-4 py-4;
+    }
+
+    .simple-review-form .modal-show-product .product-images img {
+        @apply w-16 h-auto object-contain mix-blend-darken;
+    }
+
+    .simple-review-form .modal-content {
+        @apply border-t border-dashed border-base-300 py-5;
+    }
+
+    .simple-review-form .modal-content textarea {
+        @apply text-strong w-full block border border-base-200 rounded-field p-4 h-40 resize-none overflow-y-auto overflow-x-hidden;
+    }
+
+    .simple-review-form .modal-footer {
+        @apply flex justify-between items-center flex-col gap-4 border-t border-base-200 pt-4;
+    }
+
+    .simple-review-form .modal-footer .simple-review-rules {
+        @apply block mt-2 w-full;
+    }
+
+    .simple-review-form .modal-footer .simple-review-rules span {
+        @apply flex items-center justify-center w-full text-strong text-sm
+    }
+
+    .simple-review-form .modal-footer .simple-review-rules span a {
+        @apply text-sky-600 mx-1
+    }
+}

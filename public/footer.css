@@ -1,0 +1,25 @@
+@layer components {
+    footer {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: var(--color-base-100);
+        display: block;
+    }
+
+    @media (max-width: 1140px) {
+        footer {
+            @apply !hidden;
+        }
+    }
+    @media (max-width: 1024px) {
+        footer {
+            @apply !hidden;
+        }
+    }
+    @media (max-width: 768px) {
+        footer {
+            @apply !hidden;
+        }
+    }
+}

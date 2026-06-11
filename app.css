@@ -1,0 +1,155 @@
+/* npx @tailwindcss/cli -i app.css -o ./public/output.css --watch */
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: lofi --default;  /* فقط تم light فعال باشه و به عنوان پیش‌فرض باشه */
+}
+@layer base {
+    html {
+        font-size: 13px; /* 1rem = 18px */
+    }
+}
+
+@theme {
+    --color-muted: rgb(137, 137, 151);
+    --color-strong: oklch(0.427 0.043 291.527);
+    --color-medium: oklch(0.347 0.052 283.355);
+    --color-default: oklch(0.236 0.062 283.325);
+    --text-md: 0.9rem;
+    --radius-base: 0.6rem;
+    --container-xs-w: 100%;
+    --container-sm-w: 540px;
+    --container-md-w: 768px;
+    --container-lg-w: 960px;
+    --container-xl-w: 1140px;
+    --container-2xl-w: 1280px;
+    --container-3xl-w: 1440px;
+    --container-4xl-w: 1536px;
+    --container-5xl-w: 1920px;
+}
+@layer utilities {
+    .container-xs-w {
+        width: 100%;
+        max-width: var(--container-xs-w);
+    }
+
+    .container-sm-w {
+        width: 100%;
+        max-width: var(--container-sm-w);
+    }
+
+    .container-md-w {
+        width: 100%;
+        max-width: var(--container-md-w);
+    }
+
+    .container-lg-w {
+        width: 100%;
+        max-width: var(--container-lg-w);
+    }
+
+    .container-xl-w {
+        width: 100%;
+        max-width: var(--container-xl-w);
+    }
+
+    .container-2xl-w {
+        width: 100%;
+        max-width: var(--container-2xl-w);
+    }
+
+    .container-3xl-w {
+        width: 100%;
+        max-width: var(--container-3xl-w);
+    }
+
+    .container-4xl-w {
+        width: 100%;
+        max-width: var(--container-4xl-w);
+    }
+
+    .container-5xl-w {
+        width: 100%;
+        max-width: var(--container-5xl-w);
+    }
+
+    button[type="submit"] {
+        @apply w-fit px-8 py-4 rounded-field text-sm font-medium leading-tight;
+    }
+
+    .d-ltr {
+        direction: ltr;
+    }
+
+    .d-rtl {
+        direction: rtl;
+    }
+
+    .text-xxs {
+        font-size: 10px;
+    }
+
+    .custom-modal {
+        @apply absolute w-max h-max top-full m-0 p-0 left-auto bg-base-100 rounded-box right-auto;
+    }
+
+    button {
+        @apply cursor-pointer
+    }
+
+    /*custom-zIndex...*/
+    .z-100 {z-index: 100}
+    .z-110 {z-index: 110}
+    .z-120 {z-index: 120}
+    .z-130 {z-index: 130}
+    .z-140 {z-index: 140}
+    .z-150 {z-index: 150}
+}
+
+@import "./public/my-account.css";
+@import "./public/tooltip.css";
+/* @import "./public/timer.css"; */
+@import "./public/gallery.css";
+@import "./public/reviews.css";
+@import "./public/review-modals.css";
+@import "./public/backorder.css";
+@import "./public/not-purchasable.css";
+@import "./public/product-variables.css";
+@import "./public/single-product.css";
+@import "./public/footer.css";
+@import "./public/header.css";
+/*DEFAULT THEME...*/
+@plugin "daisyui/theme" {
+    name: "dark";
+    default: true;
+    prefersdark: true;
+    color-scheme: "dark";
+    --color-base-100: oklch(100% 0 0);
+    --color-base-150: oklch(0.982 0.002 247.839);
+    --color-base-200: oklch(0.978 0.007 286.277);
+    --color-base-300: oklch(0.938 0.01 273.352);
+    --color-base-content: oklch(0% 0 0);
+    --color-primary: oklch(0.61 0.231 22.805);
+    --color-primary-content: oklch(100% 0 0);
+    --color-secondary: oklch(0.689 0.152 160.725);
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: oklch(26.9% 0.005 258.900);
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(0.247 0.025 274.338);
+    --color-neutral-content: oklch(100% 0 0);
+    --color-info: oklch(0.705 0.11 211.178);
+    --color-info-content: oklch(100% 0 0);
+    --color-success: oklch(86.4% 0.197 164.140);
+    --color-success-content: oklch(100% 0 0);
+    --color-warning: oklch(88.37% 0.135 79.94);
+    --color-warning-content: oklch(100% 0 0);
+    --color-error: oklch(70% 0.200 46);
+    --color-error-content: oklch(100% 0 0);
+    --radius-selector: 2rem;
+    --radius-field: 0.7rem;
+    --radius-box: 1rem;
+    --size-selector: 0.1875rem;
+    --size-field: 0.1875rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 1;
+}

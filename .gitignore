@@ -1,0 +1,22 @@
+# Composer
+/vendor
+
+# Node
+/node_modules
+
+# Styles
+/assets
+
+# Debuger
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db

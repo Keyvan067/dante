@@ -1,0 +1,18 @@
+@layer components {
+
+    .product-meta-variables .product-variations-content {
+        @apply w-full block py-2 select-none;
+    }
+    .product-meta-variables .product-variations-content .variation-header {
+        @apply flex flex-row mb-2;
+    }
+    .product-meta-variables .product-variations-content .custom-attribute-option {
+        @apply overflow-auto sm:gap-6 p-2 flex justify-start items-start gap-4;
+    }
+    .product-meta-variables .product-variations-content .product-colors-var {
+        @apply size-7 text-xs p-2 text-nowrap rounded-full ring-offset-2 cursor-pointer hover:opacity-75;
+    }
+    .product-meta-variables .product-variations-content .product-other-var{
+        @apply w-auto min-w-fit text-nowrap min-h-7 h-7 text-xs p-2 font-bold rounded-full ring-offset-2 cursor-pointer hover:opacity-75 flex items-center justify-center;
+    }
+}

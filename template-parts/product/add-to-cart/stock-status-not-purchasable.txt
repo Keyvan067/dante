@@ -1,0 +1,90 @@
+<style>
+    body {
+        padding: 1rem;
+    }
+
+    div:has(> .ag-charts-wrapper),
+    ag-charts,
+    ag-financial-charts {
+        padding: 0 !important;
+        border: none !important;
+    }
+</style>
+<div class="product-card-not-purchasable">
+    <div class="pdk-cnp-chart flex flex-col gap-4 p-4">
+        <div class="np-head flex justify-between items-center">
+            <span>آخرین قیمت ثبت شده</span>
+            <div class="flex flex-col items-end gap-2">
+                <span>1404/12/08</span>
+                <div>
+                    <ins>10.000.000</ins>
+                    <span class="currency-symbol currency-irr"></span>
+                </div>
+            </div>
+        </div>
+        <div class="np-chart">
+            <div style="width: 100%;height: auto; min-height: 200px;" id="chart"></div>
+        </div>
+    </div>
+    <div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+
+    var options = {
+        series: [
+            {
+                data: [-33, -13, -45, 95, 12, 15, -34, -61, 66, 82, 1, -36]
+            }
+        ],
+        chart: {
+            height: 250,
+            type: 'line',
+            zoom: {
+                enabled: false,
+            }
+        },
+        dataLabels: {
+            enabled: false,
+        },
+        title: {
+            text: '',
+            align: 'right',
+        },
+        xaxis: {
+            categories: [
+                'فروردین',
+                'اردیبهشت',
+                'خرداد',
+                'تیر',
+                'مرداد',
+                'شهریور',
+                'مهر',
+                'آبان',
+                'آذر',
+                'دی',
+                'بهمن',
+                'اسفند',
+            ],
+        },
+        stroke: {
+            width: 3,
+            curve: "monotoneCubic"
+        },
+        plotOptions: {
+            line: {
+                colors: {
+                    threshold: 0,
+                    colorAboveThreshold: '#0088ee',
+                    colorBelowThreshold: '#ff0000',
+                },
+            },
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+
+</script>

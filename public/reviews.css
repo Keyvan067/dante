@@ -1,0 +1,144 @@
+@layer components {
+    .product-reviews {
+    }
+
+    .review-wrapper {
+        @apply relative flex flex-row justify-between items-start gap-4;
+    }
+
+    .review-list {
+    }
+
+    .review-item {
+        @apply border border-base-200 rounded-box mb-16 px-8 flex flex-col gap-3 justify-start items-start py-12;
+    }
+
+    /*aside...*/
+    .review-aside-wrapper {
+        @apply sticky top-[var(--header-element-margin)] flex h-auto basis-1/4;
+    }
+
+    .review-aside-wrapper > div {
+        @apply block w-full h-fit;
+    }
+
+    .reviews-info {
+        @apply border border-base-200 rounded-box p-3 w-full flex flex-col items-center gap-4;
+    }
+
+    .average-rating {
+        @apply flex flex-col justify-center items-center gap-2  mt-2;
+    }
+
+    .average-rating .rating-number {
+        @apply text-strong text-3xl font-bold;
+    }
+
+    .average-rating .review-count {
+    }
+
+    .average-rating .rating-stars {
+        @apply text-amber-500 text-xl;
+    }
+
+    /*header...*/
+    .review-header {
+        @apply flex justify-between gap-2 items-center w-full;
+    }
+
+    .review-header .review-header-info {
+        @apply flex flex-col justify-start items-start gap-4;
+    }
+
+    .review-header .review-header-info .reviewer-name {
+        @apply block font-bold text-default text-xl;
+    }
+
+    .review-header .review-header-info .reviewer-purchased {
+        @apply mx-2 bg-rose-500 text-white px-2 py-1 rounded-full text-xs
+    }
+
+    .review-header .review-header-info .review-rating {
+        @apply flex items-center justify-center gap-4 font-bold;
+    }
+
+    .review-header .review-header-info .review-rating .review-stars {
+        @apply text-md items-center flex flex-row justify-center;
+    }
+
+    .review-header .review-header-info .review-date {
+        @apply text-default tracking-wider text-md;
+    }
+
+    /*title...*/
+    .review-item .review-title {
+        @apply block;
+    }
+
+    .review-item .review-title h4 {
+        @apply font-bold text-base text-strong;
+    }
+
+    /*body...*/
+    .review-item .review-body {
+        @apply w-full flex flex-col justify-start gap-4;
+    }
+
+    .review-item .review-body .review-content {
+        @apply w-full block;
+    }
+
+    .review-item .review-body .review-content p {
+        @apply tracking-wide text-sm text-muted text-justify font-medium !leading-relaxed;
+    }
+
+    /*reviews-swiper...*/
+    .review-detail-content .users-galleryThumbnail.swiper {
+        @apply w-full;
+    }
+
+    .review-detail-content .users-galleryThumbnail .swiper-wrapper {
+        @apply w-auto p-4 -space-x-2;
+    }
+
+    .review-detail-content .users-galleryThumbnail .swiper-wrapper .swiper-slide {
+        @apply min-w-0 max-w-fit hover:z-10 bg-base-100;
+    }
+
+    .review-detail-content .users-galleryThumbnail .swiper-slide button {
+        @apply w-12 h-12 z-0 hover:z-10 hover:scale-110 bg-base-100 p-1 transition-all duration-200 !rounded-full ring-2 ring-offset-2 ring-slate-200 overflow-hidden;
+    }
+
+    .review-detail-content .users-galleryThumbnail .swiper-slide .review-thumb img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: all 0.2s;
+        background-color: var(--color-base-100);
+        mix-blend-mode: darken;
+        /*-ms-transform: translate(-50%, -50%);*/
+        /*-webkit-transform: translate(-50%, -50%);*/
+        /*-moz-transform: translate(-50%, -50%);*/
+        /*transform: translate(-50%, -50%);*/
+        /*position: absolute;*/
+        /*left: 50%;*/
+        /*top: 50%;*/
+    }
+
+    @media (max-width: 768px) {
+        #reviews .review-wrapper {
+            @apply flex flex-col
+        }
+
+        #reviews .review-wrapper aside.review-aside-wrapper {
+            @apply w-full;
+        }
+
+        #reviews .review-wrapper .review-aside-wrapper div {
+            @apply w-full;
+        }
+        #reviews .review-wrapper .review-aside-wrapper .reviews-info{}
+    }
+}

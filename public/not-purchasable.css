@@ -1,0 +1,43 @@
+@layer components {
+    .product-card-not-purchasable {
+        @apply w-full block;
+    }
+
+    .product-card-not-purchasable .purchasable-wrapper {
+        @apply flex flex-col gap-4;
+    }
+
+    .product-card-not-purchasable .purchasable-info {
+        @apply border-t border-base-200 px-4 py-8 rounded-box;
+    }
+
+    .product-card-not-purchasable .purchasable-info > div {
+        @apply w-full block text-center mb-4;
+    }
+
+    .product-card-not-purchasable .purchasable-info .purchasable-price {
+        @apply flex flex-col items-start gap-3 w-full;
+    }
+
+    .product-card-not-purchasable .purchasable-info .purchasable-update-price {
+        @apply flex justify-between gap-4 items-center w-full text-sm;
+    }
+
+    .product-card-not-purchasable .purchasable-info .purchasable-last-price {
+        @apply flex justify-between gap-4 items-center w-full text-sm;
+    }
+
+    .product-card-not-purchasable .purchased-contact {
+        @apply w-full block p-4;
+    }
+
+    .product-card-not-purchasable .purchased-contact > div {
+        @apply flex flex-row justify-between items-center gap-3 mb-3 px-2
+    }
+
+    .product-card-not-purchasable .purchased-contact .purchased-contact__href {
+        @apply btn btn-primary btn-soft !py-6 !w-full text-md;
+    }
+
+
+}

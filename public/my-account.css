@@ -1,0 +1,111 @@
+@layer components {
+    .profile-layout-container {
+        @apply flex items-start justify-center w-full space-x-20;
+    }
+
+    /* sidebar... */
+    .profile-layout-container .profile-sidebar {
+        @apply w-xs max-w-sm min-w-xs bg-base-100 rounded-l-xl;
+    }
+
+    .profile-sidebar .sidebar-header-content {
+        @apply w-full mb-8;
+    }
+
+    .profile-sidebar .sidebar-header-content .sidebar-profile {
+        @apply w-full flex flex-col shadow-lg shadow-base-200 rounded-2xl bg-base-100 p-4 border border-base-300 min-h-52;
+    }
+
+    .profile-sidebar .sidebar-header-content .user-avatar {
+        @apply flex flex-col justify-center items-center gap-3
+    }
+
+    .profile-sidebar .sidebar-header-content .user-avatar img {
+        @apply w-32 h-auto object-contain mix-blend-darken;
+    }
+
+    .profile-sidebar .sidebar-header-content .detail-avatar {
+        @apply p-3
+    }
+
+    .profile-sidebar .sidebar-header-content .detail-avatar {
+    }
+
+    .profile-layout-container .profile-sidebar .sidebar-content {
+        @apply w-full h-full relative p-4;
+    }
+
+    .profile-layout-container .profile-sidebar .sidebar-content ul {
+        @apply w-full flex space-y-0 flex-col *:last:border-none;
+    }
+
+    .profile-layout-container .profile-sidebar .sidebar-content li {
+        @apply w-full text-medium border-b border-base-300 font-medium text-base;
+    }
+
+    .profile-layout-container .profile-sidebar .sidebar-content li a {
+        @apply hover:bg-base-200 transition-all flex py-6 px-1 flex-nowrap items-center gap-2 grow h-full w-full cursor-pointer;
+    }
+
+    /* content... */
+    .profile-layout-container .profile-content {
+        @apply w-full flex flex-col grow space-y-8;
+    }
+
+    .profile-layout-container .profile-content .account-notice {
+        @apply relative w-full flex text-amber-950 items-center gap-2 text-base bg-amber-50 rounded-lg p-4;
+    }
+
+    .profile-layout-container .profile-content .account-notice .close-notice {
+        @apply cursor-pointer absolute left-2 p-2 text-default text-sm justify-center flex items-center;
+    }
+
+    .profile-layout-container .profile-content section.first-orders {
+        @apply block w-full;
+    }
+
+    .profile-content .first-orders .widgets-wrapper {
+        @apply w-full grid grid-cols-3 grid-rows-1 gap-4;
+    }
+
+
+    .profile-content .first-orders .widgets-wrapper .widget-card {
+        @apply w-auto grow max-w-lg flex flex-row justify-start items-center py-6 px-4 gap-8 rounded-xl ring ring-base-200 bg-gray-50
+    }
+
+    .profile-content .first-orders .widgets-wrapper .widget-card .wc-ico {
+        @apply md:hidden lg:block;
+    }
+
+    .profile-content .first-orders .widgets-wrapper .widget-card .wc-info {
+        @apply flex flex-col justify-center items-start text-muted;
+    }
+
+    .profile-content .first-orders .widgets-wrapper .widget-card .wc-info span:first-child {
+        @apply font-bold text-base text-medium;
+    }
+
+    .profile-content .first-orders .widgets-wrapper .widget-card {
+    }
+
+    .profile-content .section-header {
+        @apply flex justify-between items-center p-5 space-x-8 mb-8;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
